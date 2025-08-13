@@ -1,6 +1,11 @@
 import kareltherobot.*;
 
 public class Main implements Directions{
+  public static void turnRight(Robot r) {
+    r.turnLeft();
+    r.turnLeft();
+    r.turnLeft();
+}
   public static void main(String[] args) {
     World.setVisible(true);// allows us to see the run
     World.setDelay(EastVal);
@@ -103,5 +108,6 @@ public class Main implements Directions{
     r.move();
     r.move();
     r.move();
+    turnRight(r);
   }
 }
