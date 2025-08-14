@@ -23,11 +23,17 @@ public class Main implements Directions{
   public static void main(String[] args) {
     World.setVisible(true);
     World.setDelay(0);
-    World.setSize(50, 50);
-    Robot r = new Robot(2,25,South,20000);
+    System.out.println("Enter the size of the grid (x enter, then y enter):");
+    Scanner bigx = new Scanner(System.in);
+    int xGRID = bigx.nextInt();
+    Scanner bigy = new Scanner(System.in);
+    int yGRID = bigy.nextInt();
+    World.setSize(xGRID, yGRID);
+    Robot r = new Robot(2,yGRID/2,South,2003203492);
     Scanner z = new Scanner(System.in);
     int y = z.nextInt();
     //gets input for how big to make the diamond
+    System.out.println("how big do you want the diamond to be? (half the x value then -1)");
     for (int x = 0; x < 30; x++) {
       turnRight(r);
       Diamondgo(r,y);
